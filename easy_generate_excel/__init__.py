@@ -1,2 +1,2 @@
 from .sheet import Sheet
-from .workbook import ExcelFile
+from .workbook import ExcelWorkBook

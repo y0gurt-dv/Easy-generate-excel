@@ -10,20 +10,6 @@ ALL = Literal['all']
 
 
 class Sheet:
-    ATTRS = [
-        'name',
-        'headers',
-        'data',
-        'bold_header',
-        'auto_filter',
-        'center_cols_indexes',
-        'center_headers_indexes',
-        'not_center_cols_indexes',
-        'not_center_headers_indexes',
-        'cell_expansion',
-        'min_cell_width',
-    ]
-
     def __init__(
             self,
             name: str,

@@ -7,7 +7,7 @@ from openpyxl import Workbook
 from .sheet import Sheet
 
 
-class ExcelFile:
+class ExcelWorkBook:
     def __init__(self, sheets: Union[List[dict], List[Sheet]]):
         self.sheets = sheets
 
@@ -85,10 +85,9 @@ class ExcelFile:
             Create and save new file with ``output_name`` to ``output_path``\n
             ``output_name`` must be ``WITHOUT`` format
         """
-        bytes: BytesIO = self.create()
+        workbook: Workbook = self.create()
         filepath = os.path.join(output_path, f'{output_name}.xlsx')
-        with open(filepath, 'wb') as fp:
-            fp.write(bytes.getvalue())
+        workbook.save(filepath)
 
         return filepath
 
