@@ -5,5 +5,8 @@ setuptools.setup(
     version="0.0.1",
     author='Daniil',
     description='Easy generate excel files',
-    packages=['easy_generate_excel']
+    packages=['easy_generate_excel'],
+    install_requires=[
+        'openpyxl',
+    ],
 )
